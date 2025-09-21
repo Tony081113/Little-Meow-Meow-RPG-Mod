@@ -1,0 +1,127 @@
+{
+    "info": {
+        "author": "efs",
+        "modename": "animals",
+        "modeversion": "1.0",
+        "dev-version": 1
+    },
+
+    "data": {
+        "animal": {"cat":    {"hp": 10,
+                              "drops": ["cat feces"],
+                              "display-emoji": "\uD83D\uDC31"},
+                   "dog":    {"hp": 15,
+                              "drops": ["dog feces"],
+                              "display-emoji": "\uD83D\uDC36"},
+                   "writer": {"hp": 50,
+                              "drops": ["mod", "laptop", "sever"],
+                              "display-emoji": "\uD83E\uDDD1"}},
+        "block": {},
+        "item": {"instant noodles": {
+                                   "type": ["food"],
+                                   "gen": {
+                                       "health": 20,
+                                       "cooked": true
+                                   },
+                                   "trade": {
+                                       "sold": 2,
+                                       "buy": 2
+                                   }
+                               },
+                  "cat food"      : {
+                                      "type": ["food"],
+                                      "gen": {
+                                        "health": 5,
+                                        "cooked": false
+                                      },
+                                      "trade": {
+                                        "sold": 1,
+                                        "buy": 1
+                                      }
+                                 },
+                  "dog food"      : {
+                                      "type": ["food"],
+                                      "gen": {
+                                        "health": 8,
+                                        "cooked": false
+                                      },
+                                      "trade": {
+                                        "sold": 1,
+                                        "buy": 1
+                                      }
+                                 },
+                  "sever"      : {
+                                      "type": ["tool"],
+                                      "trade": {
+                                        "sold": 50,
+                                        "buy": 100
+                                      }
+                                 },
+                  "laptop"      : {
+                                        "type": ["tool"],
+                                        "trade": {
+                                            "sold": 30,
+                                            "buy": 60
+                                        }
+                                     },
+                  "mod"         : {
+                                      "type": ["tool"],
+                                      "trade": {
+                                          "sold": 100,
+                                          "buy": 200
+                                      }
+                                  },
+                  "dog feces"  : {
+                                      "type": ["food"],
+                                      "gen": {
+                                            "health": 1,
+                                            "cooked": false 
+                                      },
+                                      "trade": {
+                                          "sold": 1,
+                                          "buy": 1
+                                      }
+                                  },
+                  "cat feces"  : {
+                                      "type": ["food"],
+                                      "gen": {
+                                            "health": 1,
+                                            "cooked": false 
+                                      },
+                                      "trade": {
+                                          "sold": 1,
+                                          "buy": 1
+                                      }
+                                  }
+                }
+            },
+    "rule":{
+        "animal": {
+                    "cat": {
+                    "chunk": {
+                        "max": 10,
+                        "min": 1
+                    },
+                    "type": ["normal"]
+                    },
+                    "dog": {
+                    "chunk": {
+                        "max": 10,
+                        "min": 1
+                    },
+                    "type": ["normal"]
+                    },
+                    "writer": {
+                    "chunk": {
+                        "max": 1,
+                        "min": 0
+                    },
+                    "type": ["Extremely rare"]
+                    }
+            },
+            "block": {}
+        },
+
+    "type": ["normal", "Extremely rare", "tool"]
+    
+}
