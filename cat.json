@@ -2,7 +2,7 @@
     "info": {
         "author": "efs",
         "modename": "animals",
-        "modeversion": "1.1",
+        "modeversion": "1.1.0",
         "dev-version": 1
     },
 
@@ -92,8 +92,37 @@
                                           "sold": 1,
                                           "buy": 1
                                       }
-                                  }
-                }
+                                  },
+                  "die cat"        : {
+                                        "type": ["food"],
+                                        "gen": {
+                                            "health": 5,
+                                            "cooked": true
+                                        },
+                                        "trade": {
+                                            "sold": 0,
+                                            "buy": 3
+                                        }
+                                 },
+                  "die dog"      : {
+                                        "type": ["food"],
+                                        "gen": {
+                                            "health": 5,
+                                            "cooked": true
+                                        },
+                                        "trade": {
+                                            "sold": 0,
+                                            "buy": 3
+                                        }
+                                 },
+                  "knife"      : {
+                                        "type": ["cold weapons"],
+                                        "trade": {
+                                            "sold": 30,
+                                            "buy": 50
+                                        }
+                                 }
+                                }       
             },
     "rule":{
         "animal": {
@@ -122,6 +151,6 @@
             "block": {}
         },
 
-    "type": ["normal", "Extremely rare", "tool"]
+    "type": ["normal", "Extremely rare", "tool", "cold weapons", "Hot weapons"]
     
 }
