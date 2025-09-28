@@ -2,7 +2,7 @@
     "info": {
         "author": "efs",
         "modename": "animals",
-        "modeversion": "1.1.1",
+        "modeversion": "1.1.2",
         "dev-version": 1
     },
 
@@ -16,8 +16,46 @@
                    "writer": {"hp": 50,
                               "drops": ["mod", "laptop", "sever"],
                               "display-emoji": "\uD83E\uDDD1"}},
-        "block": {},
-        "item": {"instant noodles": {
+        "block": {"knife trap": {
+                                        "drops": ["knife trap"],
+                                        "display-emoji": "\uD83D\uDD2A",
+                                        "events": ["injured"]
+                                        },
+                  "gun trap": {
+                                        "drops": ["gun trap"],
+                                        "display-emoji": "\uD83D\uDD2B",
+                                        "events": ["injured"]
+                                    },
+                  "sever": {
+                                        "drops": ["sever"],
+                                        "display-emoji": "\uD83D\uDDA5",
+                                        "events": ["recover"]
+                                     },
+                    "laptop": {
+                                            "drops": ["laptop"],
+                                            "display-emoji": "\uD83D\uDCBB",
+                                            "events": ["recover"]
+                                         },
+                    "mod": {
+                                        "drops": ["mod"],
+                                        "display-emoji": "\uD83E\uDDD1",
+                                        "events": ["recover"]
+                  },
+                    "bomb": {
+                                     "drops": ["bomb"],
+                                     "display-emoji": "\uD83D\uDCA3",
+                                     "events": ["explode"]
+                                 }
+                },
+                 
+        "item": {"bomb": {
+                                   "type": ["explosive"],
+                                   "trade": {
+                                       "sold": 20,
+                                       "buy": 40
+                                   }
+                               },
+                 "instant noodles": {
                                    "type": ["food"],
                                    "gen": {
                                        "health": 20,
@@ -115,15 +153,15 @@
                                             "buy": 3
                                         }
                                  },
-                  "knife"      : {
-                                        "type": ["cold weapons"],
+                  "knife trap"      : {
+                                        "type": ["cold weapon trap"],
                                         "trade": {
                                             "sold": 30,
                                             "buy": 50
                                         }
                                  },
-                  "gun"        : {
-                                        "type": ["Hot weapons"],
+                  "gun trap"        : {
+                                        "type": ["hot weapon trap"],
                                         "trade": {
                                             "sold": 100,
                                             "buy": 200
@@ -155,9 +193,51 @@
                     "type": ["Extremely rare"]
                     }
             },
-            "block": {}
+            "block": {
+                "knife trap": {
+                    "chunk": {
+                            "max": 2
+                        },
+                    "type": ["cold weapon trap"]
+                    },
+                "gun trap": {
+                    "chunk": {
+                        "max": 2
+                    },
+                    "type": ["hot weapon trap"]
+                },
+                "sever": {
+                    "chunk": {
+                        "max": 1
+                    },
+                    "type": ["tool"]
+                },
+                "laptop": {
+                    "chunk": {
+                        "max": 1
+                    },
+                    "type": ["tool"]
+                },
+                "mod": {
+                    "chunk": {
+                        "max": 1
+                    },
+                    "type": ["tool"]
+                },
+                "bomb": {
+                    "chunk": {
+                        "max": 3
+                    },
+                    "type": ["explosive"]
+                }
+
+            }
         },
 
-    "type": ["normal", "Extremely rare", "tool", "cold weapons", "Hot weapons"]
-    
+    "type": ["normal", "Extremely rare", "tool", "cold weapon trap", "hot weapon trap", "explosive"],
+    "events": {
+        "injured": {
+            "core": "de-health"
+        }
+    }
 }
