@@ -1,17 +1,17 @@
 {
     "info": {
         "author": "efs",
-        "modename": "animals",
-        "modeversion": "1.1.2",
+        "modname": "animals",
+        "modversion": "1.1.2(debug)",
         "dev-version": 1
     },
 
     "data": {
         "animal": {"cat":    {"hp": 10,
-                              "drops": ["cat feces"],
+                              "drops": ["cat feces", "die cat"],
                               "display-emoji": "\uD83D\uDC31"},
                    "dog":    {"hp": 15,
-                              "drops": ["dog feces"],
+                              "drops": ["dog feces", "die dog"],
                               "display-emoji": "\uD83D\uDC36"},
                    "writer": {"hp": 50,
                               "drops": ["mod", "laptop", "sever"],
@@ -173,22 +173,19 @@
         "animal": {
                     "cat": {
                     "chunk": {
-                        "max": 10,
-                        "min": 1
+                        "max": 1
                     },
                     "type": ["normal"]
                     },
                     "dog": {
                     "chunk": {
-                        "max": 10,
-                        "min": 1
+                        "max": 1
                     },
                     "type": ["normal"]
                     },
                     "writer": {
                     "chunk": {
-                        "max": 1,
-                        "min": 0
+                        "max": 1
                     },
                     "type": ["Extremely rare"]
                     }
@@ -196,13 +193,13 @@
             "block": {
                 "knife trap": {
                     "chunk": {
-                            "max": 2
+                            "max": 1
                         },
                     "type": ["cold weapon trap"]
                     },
                 "gun trap": {
                     "chunk": {
-                        "max": 2
+                        "max": 1
                     },
                     "type": ["hot weapon trap"]
                 },
@@ -226,7 +223,7 @@
                 },
                 "bomb": {
                     "chunk": {
-                        "max": 3
+                        "max": 1    
                     },
                     "type": ["explosive"]
                 }
