@@ -2,7 +2,8 @@
   "info": {
     "author": "efs & command_cat",
     "modname": "animals",
-    "modversion": "1.1.7"
+    "modversion": "1.1.8",
+    "description": "Only for beta version"
   },
   "data": {
     "animal": {
