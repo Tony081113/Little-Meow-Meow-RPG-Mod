@@ -1,293 +1,236 @@
 {
-    "info": {
-        "author": "efs",
-        "modname": "animals",
-        "modversion": "1.1.3",
-        "dev-version": 1
+  "info": {
+    "author": "efs & command_cat",
+    "modname": "animals",
+    "modversion": "1.1.7"
+  },
+  "data": {
+    "animal": {
+      "cat": {
+        "hp": 10,
+        "drops": ["cat-feces", "die-cat"],
+        "display-emoji": "🐱"
+      },
+      "dog": {
+        "hp": 15,
+        "drops": ["dog-feces", "die-dog"],
+        "display-emoji": "🐶"
+      },
+      "writer": {
+        "hp": 50,
+        "drops": ["mod", "laptop", "server"],
+        "display-emoji": "🧑"
+      },
+      "小喵喵": {
+        "hp": 100,
+        "drops": ["cat-feces", "die-cat"],
+        "display-emoji": "<:little_cat1:1199912046964252682>"
+      }
     },
-
-    "data": {
-        "animal": {"cat":    {"hp": 10,
-                              "drops": ["cat feces", "die cat"],
-                              "display-emoji": "\uD83D\uDC31"},
-                   "dog":    {"hp": 15,
-                              "drops": ["dog feces", "die dog"],
-                              "display-emoji": "\uD83D\uDC36"},
-                   "writer": {"hp": 50,
-                              "drops": ["mod", "laptop", "sever"],
-                              "display-emoji": "\uD83E\uDDD1"},
-                    "貓貓":{
-                              "hp": 100,
-                              "drops": ["cat cat feces", "die cat cat"],
-                              "display-emoji": "\uD83D\uDC51"
-                    }},
-        "block": {"knife trap": {
-                                        "drops": ["knife trap"],
-                                        "display-emoji": "\uD83D\uDD2A",
-                                        "events": ["injured"]
-                                        },
-                  "gun trap": {
-                                        "drops": ["gun trap"],
-                                        "display-emoji": "\uD83D\uDD2B",
-                                        "events": ["injured"]
-                                    },
-                  "sever": {
-                                        "drops": ["sever"],
-                                        "display-emoji": "\uD83D\uDDA5",
-                                        "events": ["recover"]
-                                     },
-                    "laptop": {
-                                            "drops": ["laptop"],
-                                            "display-emoji": "\uD83D\uDCBB",
-                                            "events": ["recover"]
-                                         },
-                    "mod": {
-                                        "drops": ["mod"],
-                                        "display-emoji": "\uD83E\uDDD1",
-                                        "events": ["recover"]
-                  },
-                    "bomb": {
-                                     "drops": ["bomb"],
-                                     "display-emoji": "\uD83D\uDCA3",
-                                     "events": ["explode"]
-                                 },
-                    "cat cat feces": {
-                                        "drops": ["cat cat feces"],
-                                        "display-emoji": "\uD83D\uDCA9"
-                                    },
-                    "die cat cat": {
-                                        "drops": ["die cat cat"],
-                                        "display-emoji": "\uD83E\uDDDA"
-                                    }
-                },
-                 
-        "item": {"bomb": {
-                                   "type": ["explosive"],
-                                   "trade": {
-                                       "sold": 20,
-                                       "buy": 40
-                                   }
-                               },
-                 "instant noodles": {
-                                   "type": ["food"],
-                                   "gen": {
-                                       "health": 20,
-                                       "cooked": true
-                                   },
-                                   "trade": {
-                                       "sold": 2,
-                                       "buy": 2
-                                   }
-                               },
-                  "cat food"      : {
-                                      "type": ["food"],
-                                      "gen": {
-                                        "health": 5,
-                                        "cooked": false
-                                      },
-                                      "trade": {
-                                        "sold": 1,
-                                        "buy": 1
-                                      }
-                                 },
-                  "dog food"      : {
-                                      "type": ["food"],
-                                      "gen": {
-                                        "health": 8,
-                                        "cooked": false
-                                      },
-                                      "trade": {
-                                        "sold": 1,
-                                        "buy": 1
-                                      }
-                                 },
-                  "sever"      : {
-                                      "type": ["tool"],
-                                      "trade": {
-                                        "sold": 50,
-                                        "buy": 100
-                                      }
-                                 },
-                  "laptop"      : {
-                                        "type": ["tool"],
-                                        "trade": {
-                                            "sold": 30,
-                                            "buy": 60
-                                        }
-                                     },
-                  "mod"         : {
-                                      "type": ["tool"],
-                                      "trade": {
-                                          "sold": 100,
-                                          "buy": 200
-                                      }
-                                  },
-                  "dog feces"  : {
-                                      "type": ["food"],
-                                      "gen": {
-                                            "health": 1,
-                                            "cooked": false 
-                                      },
-                                      "trade": {
-                                          "sold": 1,
-                                          "buy": 1
-                                      }
-                                  },
-                  "cat feces"  : {
-                                      "type": ["food"],
-                                      "gen": {
-                                            "health": 1,
-                                            "cooked": false 
-                                      },
-                                      "trade": {
-                                          "sold": 1,
-                                          "buy": 1
-                                      }
-                                  },
-                  "die cat"        : {
-                                        "type": ["food"],
-                                        "gen": {
-                                            "health": 5,
-                                            "cooked": true
-                                        },
-                                        "trade": {
-                                            "sold": 0,
-                                            "buy": 3
-                                        }
-                                 },
-                  "die dog"      : {
-                                        "type": ["food"],
-                                        "gen": {
-                                            "health": 5,
-                                            "cooked": true
-                                        },
-                                        "trade": {
-                                            "sold": 0,
-                                            "buy": 3
-                                        }
-                                 },
-                  "knife trap"      : {
-                                        "type": ["cold weapon trap"],
-                                        "trade": {
-                                            "sold": 30,
-                                            "buy": 50
-                                        }
-                                 },
-                  "gun trap"        : {
-                                        "type": ["hot weapon trap"],
-                                        "trade": {
-                                            "sold": 100,
-                                            "buy": 200
-                                        }
-                                },
-                    "cat cat feces"  : {
-                                        "type": ["food"],
-                                        "gen": {
-                                                "health": 3,
-                                                "cooked": false 
-                                        },
-                                        "trade": {
-                                            "sold": 5,
-                                            "buy": 10
-                                        }
-                                    },
-                    "die cat cat"    : {
-                                        "type": ["food"],
-                                        "gen": {
-                                            "health": 10,
-                                            "cooked": true
-                                        },
-                                        "trade": {
-                                            "sold": 5,
-                                            "buy": 20
-                                        }
-                }       
-            }
-        },
-    "rule":{
-        "animal": {
-                    "cat": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["normal"]
-                    },
-                    "dog": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["normal"]
-                    },
-                    "writer": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["Extremely rare"]
-                    },
-                    "貓貓": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["Extremely rare"]
-                }
-            },
-            "block": {
-                "knife trap": {
-                    "chunk": {
-                            "max": 1
-                        },
-                    "type": ["cold weapon trap"]
-                    },
-                "gun trap": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["hot weapon trap"]
-                },
-                "sever": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["tool"]
-                },
-                "laptop": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["tool"]
-                },
-                "mod": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["tool"]
-                },
-                "bomb": {
-                    "chunk": {
-                        "max": 1    
-                    },
-                    "type": ["explosive"]
-                },
-                "cat cat feces": {
-                    "chunk": {
-                        "max": 2
-                    },
-                    "type": ["food"]
-                },
-                "die cat cat": {
-                    "chunk": {
-                        "max": 1
-                    },
-                    "type": ["food"]
-                }
-
-            }
-        },
-
-    "type": ["normal", "Extremely rare", "tool", "cold weapon trap", "hot weapon trap", "explosive", "food"],
-    "events": {
-        "injured": {
-            "core": "de-health"
+    "block": {
+      "knife-trap": {
+        "drops": ["knife-trap"],
+        "display-emoji": "🔪",
+        "events": ["injured"]
+      },
+      "gun-trap": {
+        "drops": ["gun-trap"],
+        "display-emoji": "🔫",
+        "events": ["injured"]
+      },
+      "server": {
+        "drops": ["server"],
+        "display-emoji": "🖥",
+        "events": ["recover"]
+      },
+      "laptop": {
+        "drops": ["laptop"],
+        "display-emoji": "💻",
+        "events": ["recover"]
+      },
+      "mod": {
+        "drops": ["mod"],
+        "display-emoji": "🧑",
+        "events": ["recover"]
+      },
+      "bomb": {
+        "drops": ["bomb"],
+        "display-emoji": "💣",
+        "events": ["explode"]
+      }
+    },
+    "item": {
+      "bomb": {
+        "type": ["explosive"],
+        "trade": {
+          "sold": 20,
+          "buy": 40
         }
+      },
+      "instant-noodles": {
+        "type": ["food"],
+        "gen": {
+          "health": 20,
+          "cooked": true
+        },
+        "trade": {
+          "sold": 2,
+          "buy": 2
+        }
+      },
+      "cat-food": {
+        "type": ["food"],
+        "gen": {
+          "health": 5,
+          "cooked": false
+        },
+        "trade": {
+          "sold": 1,
+          "buy": 1
+        }
+      },
+      "dog-food": {
+        "type": ["food"],
+        "gen": {
+          "health": 8,
+          "cooked": false
+        },
+        "trade": {
+          "sold": 1,
+          "buy": 1
+        }
+      },
+      "server": {
+        "type": ["tool"],
+        "trade": {
+          "sold": 50,
+          "buy": 100
+        }
+      },
+      "laptop": {
+        "type": ["tool"],
+        "trade": {
+          "sold": 30,
+          "buy": 60
+        }
+      },
+      "mod": {
+        "type": ["tool"],
+        "trade": {
+          "sold": 100,
+          "buy": 200
+        }
+      },
+      "dog-feces": {
+        "type": ["food"],
+        "gen": {
+          "health": 1,
+          "cooked": false
+        },
+        "trade": {
+          "sold": 1,
+          "buy": 1
+        }
+      },
+      "cat-feces": {
+        "type": ["food"],
+        "gen": {
+          "health": 1,
+          "cooked": false
+        },
+        "trade": {
+          "sold": 1,
+          "buy": 1
+        }
+      },
+      "die-cat": {
+        "type": ["food"],
+        "gen": {
+          "health": 5,
+          "cooked": true
+        },
+        "trade": {
+          "sold": 0,
+          "buy": 3
+        }
+      },
+      "die-dog": {
+        "type": ["food"],
+        "gen": {
+          "health": 5,
+          "cooked": true
+        },
+        "trade": {
+          "sold": 0,
+          "buy": 3
+        }
+      },
+      "knife-trap": {
+        "type": ["cold-weapon-trap"],
+        "trade": {
+          "sold": 30,
+          "buy": 50
+        }
+      },
+      "gun-trap": {
+        "type": ["hot-weapon-trap"],
+        "trade": {
+          "sold": 100,
+          "buy": 200
+        }
+      }
     }
+  },
+  "rule": {
+    "animal": {
+      "cat": {
+        "chunk": {"max": 1},
+        "type": ["normal"]
+      },
+      "dog": {
+        "chunk": {"max": 1},
+        "type": ["normal"]
+      },
+      "writer": {
+        "chunk": {"max": 1},
+        "type": ["Extremely-rare"]
+      },
+      "小喵喵": {
+        "chunk": {"max": 1},
+        "type": ["Extremely-rare"]
+      }
+    },
+    "block": {
+      "knife-trap": {
+        "chunk": {"max": 1},
+        "type": ["cold-weapon-trap"]
+      },
+      "gun-trap": {
+        "chunk": {"max": 1},
+        "type": ["hot-weapon-trap"]
+      },
+      "server": {
+        "chunk": {"max": 1},
+        "type": ["tool"]
+      },
+      "laptop": {
+        "chunk": {"max": 1},
+        "type": ["tool"]
+      },
+      "mod": {
+        "chunk": {"max": 1},
+        "type": ["tool"]
+      },
+      "bomb": {
+        "chunk": {"max": 1},
+        "type": ["explosive"]
+      }
+    }
+  },
+  "type": ["normal", "Extremely-rare", "tool", "cold-weapon-trap", "hot-weapon-trap", "explosive", "food"],
+  "events": {
+    "injured": {
+      "core": "de-health"
+    }
+  }
 }
